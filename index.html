@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hari Charan — Electrical &amp; Electronics Engineer</title>
+  <meta name="description"
+    content="Hari Charan — EEE student at VIT Chennai specialising in renewable energy, power electronics, intelligent control systems, and machine learning architectures." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Neo-Brutalism Stylesheets -->
+  <link rel="stylesheet" href="neo-styles.css" />
+
+  <!-- styles.css is terminal-page specific; include it but reset conflicting body rules for this page -->
+  <style>
+    /* ── Reset terminal-page body rules for the neo-brutalism index ── */
+    body {
+      background-color: #d0d0d0 !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      display: block !important;
+      justify-content: initial !important;
+      align-items: initial !important;
+      perspective: none !important;
+      font-family: 'Space Grotesk', sans-serif !important;
+      min-height: 100vh !important;
+    }
+
+    /* Also kill the terminal UI elements if accidentally referenced */
+    .terminal {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       PROGRESS BAR
+  ═══════════════════════════════════════════ -->
+  <div class="progress-bar-container" id="progress-bar-container">
+    <div class="progress-bar-fill" id="progress-bar-fill"></div>
+    <div class="progress-checkpoints">
+      <div class="checkpoint active" data-section="hero">
+        <div class="checkpoint-dot"></div>
+      </div>
+      <div class="checkpoint" data-section="skills">
+        <div class="checkpoint-dot"></div>
+      </div>
+      <div class="checkpoint" data-section="experience">
+        <div class="checkpoint-dot"></div>
+      </div>
+      <div class="checkpoint" data-section="projects">
+        <div class="checkpoint-dot"></div>
+      </div>
+      <div class="checkpoint" data-section="education">
+        <div class="checkpoint-dot"></div>
+      </div>
+      <div class="checkpoint" data-section="contact">
+        <div class="checkpoint-dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       PAGE WRAPPER
+  ═══════════════════════════════════════════ -->
+  <div class="page-wrapper">
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-content">
+        <a href="#hero" class="nav-brand">HCV</a>
+        <div class="nav-right">
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="Hari_Charan_Resume.pdf" download="Hari_Charan_Resume.pdf" class="neo-btn resume-download-btn"><i
+              class="fa-solid fa-download"></i> Download Resume</a>
+          <button class="theme-toggle-nav" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+
+        <!-- Left: Text -->
+        <div class="hero-left">
+          <p class="hero-greeting">Hi there! 👋</p>
+          <h1 class="hero-name">I'm Hari Charan V.</h1>
+          <h2
+            style="font-size:1.6rem; font-weight:600; color:var(--cyan); margin:0; font-family:'Space Mono',monospace;">
+            Electrical &amp; Electronics Engineer
+          </h2>
+          <p class="hero-description">
+            Based in Chennai, India, I am an Electrical &amp; Electronics Engineering student at VIT Chennai with a
+            solid
+            expertise in renewable energy, power electronics, and intelligent control systems. I love working with
+            embedded systems, IoT, PCB designing, and machine learning architectures to solve real-world automation
+            challenges.
+          </p>
+
+          <!-- Social Buttons -->
+          <div class="hero-social">
+            <a href="mailto:hari2006charan@gmail.com" class="social-btn neo-social-btn" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/hari-charan-v-a97b9228a" target="_blank"
+              class="social-btn neo-social-btn" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/haricharan052006" target="_blank" class="social-btn neo-social-btn"
+              title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="terminal.html" class="social-btn neo-social-btn" title="Interactive Terminal Resume">
+              <i class="fas fa-terminal"></i>
+            </a>
+          </div>
+
+          <!-- CTA -->
+          <div class="hero-cta-container">
+            <a href="#projects" class="btn-cta">View My Projects →</a>
+          </div>
+        </div>
+
+        <!-- Right: Profile Photo Frame -->
+        <div class="hero-right">
+          <div class="hero-image-wrapper">
+            <!-- Tape sticker decoration -->
+            <div class="tape-sticker"></div>
+            <!-- Profile image — swap src="" for your actual photo -->
+            <div class="avatar-container">
+              <img src="my-avatar.png" class="neo-avatar-frame" alt="Hari Charan Avatar">
+              <div class="floating-badge badge-code"><i class="fa-solid fa-code"></i></div>
+              <div class="floating-badge badge-hardware"><i class="fa-solid fa-microchip"></i></div>
+              <div class="floating-badge badge-bulb"><i class="fa-solid fa-lightbulb"></i></div>
+            </div>
+            <!-- Label badge -->
+            <div class="deco-label">
+              <i class="fas fa-bolt"></i> EEE @ VIT Chennai
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech Badges Row -->
+      <div class="tech-badges">
+        <div class="tech-badge"><i class="fas fa-microchip"></i> Embedded Systems</div>
+        <div class="tech-badge"><i class="fas fa-solar-panel"></i> Renewable Energy</div>
+        <div class="tech-badge"><i class="fas fa-brain"></i> Machine Learning</div>
+        <div class="tech-badge"><i class="fas fa-circuit-board"></i> PCB Design</div>
+        <div class="tech-badge"><i class="fas fa-wave-square"></i> Power Electronics</div>
+        <div class="tech-badge"><i class="fas fa-wifi"></i> IoT Systems</div>
+        <div class="tech-badge"><i class="fab fa-react"></i> React Native</div>
+        <div class="tech-badge"><i class="fab fa-react"></i> React.js</div>
+        <div class="tech-badge"><i class="fab fa-js"></i> TypeScript</div>
+        <div class="tech-badge"><i class="fab fa-node-js"></i> Node.js</div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SKILLS SECTION
+    ═══════════════════════════════════════════ -->
+    <div class="container" id="skills">
+      <div class="section">
+        <h2 class="section-title">⚡ Technical Skills</h2>
+
+        <div class="skills-grid-modern">
+
+          <!-- Skill Box 1: Simulation & Design -->
+          <div class="skill-box section fade-in">
+            <div class="skill-box-header">
+              <i class="fas fa-chart-line skill-icon-large"></i>
+              <h3 class="skill-box-title">Simulation &amp; Design</h3>
+            </div>
+            <div class="tech-tags">
+              <span class="tag"><i class="fas fa-square-root-alt"></i> MATLAB</span>
+              <span class="tag"><i class="fas fa-project-diagram"></i> Simulink</span>
+              <span class="tag"><i class="fas fa-bolt"></i> LTspice</span>
+              <span class="tag"><i class="fas fa-microchip"></i> Keil Micro-Vision</span>
+            </div>
+          </div>
+
+          <!-- Skill Box 2: Programming & Web -->
+          <div class="skill-box section fade-in">
+            <div class="skill-box-header">
+              <i class="fas fa-code skill-icon-large"></i>
+              <h3 class="skill-box-title">Programming &amp; Web</h3>
+            </div>
+            <div class="tech-tags">
+              <span class="tag"><i class="fab fa-python"></i> Python</span>
+              <span class="tag"><i class="fas fa-microchip"></i> C / Java</span>
+              <span class="tag"><i class="fas fa-memory"></i> Assembly</span>
+              <span class="tag"><i class="fab fa-html5"></i> HTML5 / CSS3</span>
+              <span class="tag"><i class="fab fa-js"></i> JavaScript / TypeScript</span>
+              <span class="tag"><i class="fab fa-react"></i> React.js / Node.js</span>
+              <span class="tag"><i class="fab fa-react"></i> React Native</span>
+            </div>
+          </div>
+
+          <!-- Skill Box 3: Hardware & PCB -->
+          <div class="skill-box section fade-in">
+            <div class="skill-box-header">
+              <i class="fas fa-microchip skill-icon-large"></i>
+              <h3 class="skill-box-title">Hardware &amp; PCB</h3>
+            </div>
+            <div class="tech-tags">
+              <span class="tag"><i class="fas fa-drafting-compass"></i> KiCad</span>
+              <span class="tag"><i class="fas fa-draw-polygon"></i> EasyEDA</span>
+              <span class="tag"><i class="fas fa-plug"></i> Circuit Design</span>
+              <span class="tag"><i class="fas fa-thermometer-half"></i> Sensor Interfacing</span>
+              <span class="tag"><i class="fas fa-cpu"></i> Microcontrollers</span>
+              <span class="tag"><i class="fas fa-server"></i> Microprocessors</span>
+              <span class="tag"><i class="fas fa-network-wired"></i> Embedded Systems</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         EXPERIENCE SECTION
+    ═══════════════════════════════════════════ -->
+    <div class="container" id="experience">
+      <div class="section">
+        <h2 class="section-title">💼 Experience</h2>
+
+        <div class="timeline">
+
+          <!-- Research Internship -->
+          <div class="timeline-item section fade-in">
+            <div class="timeline-marker"></div>
+            <div class="card timeline-content">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">
+                    <i class="fas fa-flask"></i>
+                    Research Intern
+                  </div>
+                  <div class="company">
+                    <i class="fas fa-building"></i>
+                    Center for Smart Grid, VIT Chennai
+                  </div>
+                  <div class="job-desc">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Chennai, India &nbsp;·&nbsp; Guide: Dr. Sithartan
+                  </div>
+                </div>
+                <div>
+                  <span class="badge">
+                    <i class="fas fa-calendar-alt"></i>
+                    05/2025 – 07/2025
+                  </span>
+                </div>
+              </div>
+
+              <ul class="job-list">
+                <li>
+                  <strong>Solar PV Modeling:</strong> Modeled a solar PV system and boost converter using
+                  MATLAB/Simulink based on a single-diode model.
+                </li>
+                <li>
+                  <strong>Dataset Generation:</strong> Generated a comprehensive dataset across varying irradiance
+                  and temperature profiles for Artificial Neural Network (ANN) training.
+                </li>
+                <li>
+                  <strong>ANN Architecture:</strong> Designed and trained a feed-forward ANN architecture
+                  containing 2 inputs, 15 hidden neurons, and 1 output.
+                </li>
+                <li>
+                  <strong>MPPT Optimization:</strong> Implemented the ANN-based Maximum Power Point Tracking (MPPT)
+                  controller to optimize duty cycles, achieving faster dynamic responses and minimizing
+                  steady-state oscillations compared to traditional techniques.
+                </li>
+                <li>
+                  <strong>Fault Detection:</strong> Investigated the application of AI for system optimization and
+                  fault detection layouts within hybrid energy systems.
+                </li>
+              </ul>
+
+              <div class="tech-tags" style="margin-top:1.5rem;">
+                <span class="tag">MATLAB</span>
+                <span class="tag">Simulink</span>
+                <span class="tag">ANN</span>
+                <span class="tag">MPPT</span>
+                <span class="tag">Boost Converter</span>
+                <span class="tag">Smart Grid</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PROJECTS SECTION
+    ═══════════════════════════════════════════ -->
+    <div class="container" id="projects">
+      <div class="section">
+        <h2 class="section-title">🚀 Projects</h2>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: SeizureGuard -->
+          <div class="project-card section fade-in">
+            <div class="project-header">
+              <h3 class="project-title">🩺 SeizureGuard</h3>
+            </div>
+            <p class="project-desc">
+              <strong>Multi-Sensor Wearable Bio-Telemetry PCB</strong><br><br>
+              Designed and routed a compact, low-noise health monitoring PCB with optimized I²C bus architecture for
+              motion/temperature tracking, heartbeat processing, and skin conductance analysis.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">KiCad</span>
+              <span class="tag">PCB Design</span>
+              <span class="tag">I²C</span>
+              <span class="tag">Wearable</span>
+              <span class="tag">Sensor Fusion</span>
+            </div>
+          </div>
+
+          <!-- Project 2: Cadence -->
+          <div class="project-card section fade-in">
+            <div class="project-header">
+              <h3 class="project-title">📱 Cadence</h3>
+              <div class="project-links">
+                <a href="https://github.com/haricharan052006/Cadence" target="_blank" class="icon-link"
+                  title="GitHub Repository">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">
+              <strong>Native Mobile Habit Tracking Application</strong><br><br>
+              A cross-platform standalone mobile application built with a 30-Day Performance Matrix, internal scroll
+              clipping wrappers, localized client-side data persistence, and native file-sharing integrations for
+              Excel sheet exportation.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">Mobile</span>
+              <span class="tag">Data Persistence</span>
+              <span class="tag">Excel Export</span>
+              <span class="tag">Cross-platform</span>
+            </div>
+          </div>
+
+          <!-- Project 3: Smart Grid State Estimation -->
+          <div class="project-card section fade-in">
+            <div class="project-header">
+              <h3 class="project-title">🤖 Smart Grid State Estimation</h3>
+              <div class="project-links">
+                <a href="#" class="icon-link" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">
+              <strong>AI-ML Driven State Estimation for Smart Grid Applications</strong><br><br>
+              Implemented an ANN-based power system state estimation model on the IEEE 14-bus system using
+              MATLAB/MATPOWER, increasing robustness over traditional WLS methods.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">MATLAB</span>
+              <span class="tag">MATPOWER</span>
+              <span class="tag">ANN</span>
+              <span class="tag">Smart Grid</span>
+              <span class="tag">IEEE 14-bus</span>
+            </div>
+          </div>
+
+          <!-- Project 4: Power Factor Correction -->
+          <div class="project-card section fade-in">
+            <div class="project-header">
+              <h3 class="project-title">⚡ Power Factor Correction</h3>
+            </div>
+            <p class="project-desc">
+              <strong>Real-Time Power Monitoring and Power Factor Correction System</strong><br><br>
+              Designed a hardware monitoring system utilizing a PZEM module, relay-based capacitor switching, and a
+              dedicated interface to monitor electrical telemetry and dynamically correct power factor.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">PZEM</span>
+              <span class="tag">Embedded</span>
+              <span class="tag">Relay Control</span>
+              <span class="tag">Power Electronics</span>
+            </div>
+          </div>
+
+          <!-- Project 5: PID Motor Control -->
+          <div class="project-card section fade-in">
+            <div class="project-header">
+              <h3 class="project-title">🦗 GOA-PID Motor Control</h3>
+            </div>
+            <p class="project-desc">
+              <strong>Optimization of PID Controller Parameters for Enhanced Motor Control</strong><br><br>
+              Optimized PID gains using the Grasshopper Optimization Algorithm (GOA) to achieve faster transient
+              responses and minimize overshoot in MATLAB/Simulink.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">PID</span>
+              <span class="tag">GOA</span>
+              <span class="tag">MATLAB/Simulink</span>
+              <span class="tag">Motor Control</span>
+            </div>
+          </div>
+
+          <!-- Project 6: Buck-Boost Converter -->
+          <div class="project-card section fade-in">
+            <div class="project-header">
+              <h3 class="project-title">🔄 Buck-Boost Converter &amp; PCB</h3>
+            </div>
+            <p class="project-desc">
+              <strong>DC-DC Buck-Boost Converter Design and PCB Implementation</strong><br><br>
+              Simulated an inverting buck-boost topology in MATLAB, analyzed voltage gain characteristics, and
+              routed the functional schematic and PCB layout in EasyEDA.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">MATLAB</span>
+              <span class="tag">EasyEDA</span>
+              <span class="tag">Power Electronics</span>
+              <span class="tag">PCB</span>
+            </div>
+          </div>
+
+          <!-- Project 7: Fan Speed Control -->
+          <div class="project-card section fade-in">
+            <div class="project-header">
+              <h3 class="project-title">🌡️ Fan Speed Control</h3>
+            </div>
+            <p class="project-desc">
+              <strong>Temperature-Based Fan Speed Control</strong><br><br>
+              Developed an automatic environmental control system utilizing an Arduino Nano, DHT22 sensor, and
+              PWM-based regulation mapped to dynamic LED indicator ranges.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">Arduino Nano</span>
+              <span class="tag">DHT22</span>
+              <span class="tag">PWM</span>
+              <span class="tag">LED</span>
+            </div>
+          </div>
+
+          <!-- Project 8: Adaptive Headlights -->
+          <div class="project-card section fade-in">
+            <div class="project-header">
+              <h3 class="project-title">🚗 Adaptive Headlight System</h3>
+            </div>
+            <p class="project-desc">
+              <strong>Adaptive Headlight Intensity Control System</strong><br><br>
+              Built an Arduino-controlled adaptive lighting array using an LDR sensor on an RC car to automate
+              brightness optimization, reducing incoming glare and improving safety.
+            </p>
+            <div class="tech-tags">
+              <span class="tag">Arduino</span>
+              <span class="tag">LDR</span>
+              <span class="tag">Embedded</span>
+              <span class="tag">Adaptive Control</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="creator-section section fade-in" style="text-align: center; margin: 40px 0;">
+          <p class="creator-of-label">Creator of</p>
+
+          <div style="display: flex; justify-content: center; padding: 0 20px;">
+
+            <div class="project-card creator-project-card">
+              <div class="project-header">
+                <h3 class="project-title">
+                  <i class="fa-solid fa-mobile-screen-button"></i> Cadence
+                </h3>
+              </div>
+              <p class="project-desc">
+                Cadence is a habit tracking app. A cross-platform standalone mobile application built with a 30-Day
+                Performance Matrix, internal scroll clipping wrappers, localized client-side data persistence, and
+                native file-sharing integrations for Excel sheet exportation.
+              </p>
+              <div style="text-align: center;">
+                <a href="https://github.com/haricharan052006/Cadence" target="_blank" class="btn btn-secondary">
+                  <i class="fa-brands fa-github"></i> Check it out
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         EDUCATION & LANGUAGES SECTION
+    ═══════════════════════════════════════════ -->
+    <div class="container" id="education">
+      <div class="education-languages-section section fade-in">
+        <div class="education-languages-grid">
+
+          <!-- Education Column -->
+          <div class="education-column">
+            <h2 class="section-title">🎓 Education</h2>
+            <div class="card education-card">
+              <div class="education-header">
+                <div>
+                  <div class="education-title">B.Tech — Electrical &amp; Electronics Engineering</div>
+                  <div class="education-school">Vellore Institute of Technology (VIT Chennai)</div>
+                </div>
+                <span class="badge"><i class="fas fa-calendar-alt"></i> 2023 – 2027</span>
+              </div>
+              <div class="education-location">
+                <i class="fas fa-map-marker-alt"></i> Chennai, India &nbsp;·&nbsp; Expected May 2027
+              </div>
+
+              <!-- Activities -->
+              <div style="margin-top:1.5rem;">
+                <hr style="border:none; border-top:2px solid #000; margin:0 0 1.25rem 0; opacity:1;">
+                <h4 style="font-weight:700;margin-bottom:1rem;font-size:1.05rem;">🏆 Activities</h4>
+                <ul class="job-list">
+                  <li>
+                    <strong>Entrepreneurship Cell (E-Cell):</strong> Active member, contributing to end-to-end
+                    organisation of college-wide events.
+                  </li>
+                  <li>
+                    <strong>IPL Auction Auctioneer:</strong> Served as Lead Auctioneer for an IPL-themed event,
+                    demonstrating strong event coordination and public speaking skills.
+                  </li>
+                  <li>
+                    <strong>Finance Club:</strong> Active member, engaging in technical discussions on market
+                    trends and financial management strategies.
+                  </li>
+                  <li>
+                    <strong>Professional Workshops:</strong> Actively attended online technical sessions and
+                    advanced workshops focusing on Machine Learning architectures, Renewable Energy systems,
+                    and Sustainable Energy technologies.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages Column -->
+          <div class="languages-column">
+            <h2 class="section-title">🌐 Languages</h2>
+            <div class="card languages-card">
+
+              <div class="language-item">
+                <span class="language-name-inline">🇬🇧 English</span>
+                <div style="display:flex;align-items:center;gap:0.75rem;">
+                  <div class="language-stars">
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                  </div>
+                  <span class="badge" style="font-size:0.75rem;padding:0.25rem 0.6rem;">C2</span>
+                </div>
+              </div>
+
+              <div class="language-item">
+                <span class="language-name-inline">🇮🇳 Hindi</span>
+                <div style="display:flex;align-items:center;gap:0.75rem;">
+                  <div class="language-stars">
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                  </div>
+                  <span class="badge" style="font-size:0.75rem;padding:0.25rem 0.6rem;">C2</span>
+                </div>
+              </div>
+
+              <div class="language-item">
+                <span class="language-name-inline">🇮🇳 Tamil</span>
+                <div style="display:flex;align-items:center;gap:0.75rem;">
+                  <div class="language-stars">
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                  </div>
+                  <span class="badge" style="font-size:0.75rem;padding:0.25rem 0.6rem;">C2</span>
+                </div>
+              </div>
+
+              <div class="language-item">
+                <span class="language-name-inline">🇮🇳 Kannada</span>
+                <div style="display:flex;align-items:center;gap:0.75rem;">
+                  <div class="language-stars">
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star filled visible"></div>
+                    <div class="star visible"></div>
+                  </div>
+                  <span class="badge" style="font-size:0.75rem;padding:0.25rem 0.6rem;">C1</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════════ -->
+    <div class="container" id="contact">
+      <div class="section">
+        <h2 class="section-title-center">📫 Let's Connect</h2>
+        <p class="contact-intro">Open to internships, research collaborations, and exciting engineering projects!</p>
+
+        <div class="contact-grid">
+
+          <a href="mailto:hari2006charan@gmail.com" class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <span>hari2006charan@gmail.com</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/hari-charan-v-a97b9228a" target="_blank" class="contact-card">
+            <i class="fab fa-linkedin-in"></i>
+            <span>linkedin.com/in/hari-charan-v</span>
+          </a>
+
+          <a href="https://github.com/haricharan052006" target="_blank" class="contact-card">
+            <i class="fa-brands fa-github"></i>
+            <span>github.com/haricharan052006</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="footer-compact">
+        <div class="footer-main">
+          <div class="footer-brand-compact">
+            <strong>Hari Charan</strong>
+            <span>Electrical &amp; Electronics Engineer · VIT Chennai</span>
+          </div>
+          <nav class="footer-nav-compact">
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <a href="terminal.html" class="footer-terminal-link-compact">
+            <i class="fas fa-terminal"></i> Interactive Terminal
+          </a>
+        </div>
+        <div class="footer-bottom-compact">
+          <span>© Hari Charan · Chennai, India</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <!-- ═══════════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════════ -->
+  <script>
+    // ── Dark / Light Theme Toggle ──
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    function applyTheme(theme) {
+      html.dataset.theme = theme;
+      document.body.dataset.theme = theme;
+      themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+      localStorage.setItem('neo-theme', theme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      applyTheme(html.dataset.theme === 'dark' ? 'light' : 'dark');
+    });
+
+    const saved = localStorage.getItem('neo-theme');
+    if (saved) applyTheme(saved);
+
+    // ── Scroll Progress Bar ──
+    const fillEl = document.getElementById('progress-bar-fill');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      fillEl.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+    });
+
+    // ── Intersection Observer: fade-in sections ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('fade-in');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section, .timeline-item, .skill-box, .project-card').forEach(el => {
+      observer.observe(el);
+    });
+
+    // ── Star rating: animate on scroll ──
+    const starObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const stars = e.target.querySelectorAll('.star');
+          stars.forEach((s, i) => {
+            setTimeout(() => s.classList.add('visible'), i * 80);
+          });
+          starObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.language-item').forEach(el => starObserver.observe(el));
+
+    // ── Active Nav Link ──
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 150) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+      });
+
+      // Progress checkpoint activation
+      const checkpoints = document.querySelectorAll('.checkpoint');
+      const sectionIds = ['hero', 'skills', 'experience', 'projects', 'education', 'contact'];
+      sectionIds.forEach((id, idx) => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 200) {
+          checkpoints.forEach(c => c.classList.remove('active'));
+          if (checkpoints[idx]) checkpoints[idx].classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
