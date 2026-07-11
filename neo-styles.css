@@ -2852,6 +2852,35 @@ body[data-theme="dark"] .map-popup-company span {
   transition: all 0.3s ease;
 }
 
+/* Experience & Projects tech tag pills: match Skills tag shadow + compress interaction */
+#experience .tag,
+#projects .project-card .tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 0 var(--border);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+#experience .tag:hover,
+#experience .tag:active,
+#projects .project-card .tag:hover,
+#projects .project-card .tag:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 var(--border);
+  background: var(--yellow);
+  color: #000000;
+}
+
+body[data-theme="dark"] #experience .tag:hover,
+body[data-theme="dark"] #experience .tag:active,
+body[data-theme="dark"] #projects .project-card .tag:hover,
+body[data-theme="dark"] #projects .project-card .tag:active {
+  background: var(--pink);
+  color: #000000;
+}
+
 /* Contact Section - Sticky Notes */
 .contact-container-compact {
   max-width: 900px;
