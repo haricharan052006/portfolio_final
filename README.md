@@ -38,8 +38,7 @@ Plaintext
 /css            # Neo-Brutalist stylesheets
 index.html      # Main landing page structure
 🌐 Live Site
-You can view the live portfolio here: [INSERT_YOUR_VERCEL_LINK_HERE]
-
+You can view the live portfolio here: https://portfoliofinal-six-rho.vercel.app/
 📝 Contact & Networking
 GitHub: haricharan052006
 
