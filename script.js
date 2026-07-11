@@ -206,6 +206,7 @@ class TerminalResume {
       "experience",
       "projects",
       "education",
+      "certifications",
       "contact",
       "clear",
     ];
@@ -456,6 +457,9 @@ class TerminalResume {
       case "education":
         this.showEducation(outputElement);
         break;
+      case "certifications":
+        this.showCertifications(outputElement);
+        break;
       case "skills":
         this.showSkills(outputElement);
         break;
@@ -533,6 +537,9 @@ class TerminalResume {
       this.wrapWithColor("• education", "#98fb98") +
       "  " +
       this.wrapWithColor("View my educational background\n", "#ffffff") +
+      this.wrapWithColor("• certifications", "#98fb98") +
+      " " +
+      this.wrapWithColor("View my certifications\n", "#ffffff") +
       this.wrapWithColor("• contact", "#98fb98") +
       "    " +
       this.wrapWithColor("Get my contact information\n", "#ffffff") +
@@ -711,7 +718,35 @@ ${this.wrapWithColor(
   }
 
   showExperience(outputElement = this.output) {
-    const experience = `<span style="color: #ffff00; font-weight: bold;">💼 Research Experience</span>
+    const experience = `<span style="color: #ffff00; font-weight: bold;">💼 Experience</span>
+
+<span style="color: #00ffff;">MicroLabs | Electrical and Electronics Intern</span>
+${this.wrapWithColor("06/2026 | Chennai, India", "#ffffff")}
+
+• ${this.wrapWithColor(
+      "Automotive Component Testing",
+      "#ffa07a"
+    )} - ${this.wrapWithColor(
+      "Evaluated and tested various electrical and electronic sensors for automotive performance and endurance.",
+      "#ffffff"
+    )}
+• ${this.wrapWithColor(
+      "Internal Application Development",
+      "#ffa07a"
+    )} - ${this.wrapWithColor(
+      "Developed and deployed a custom mobile application for real-time tracking of orders and samples.",
+      "#ffffff"
+    )}
+
+${this.wrapWithColor("Tools & Technologies:", "#00ffff")} ${this.wrapWithColor(
+      "Automotive Testing, Sensor Evaluation, Quality Assurance, Mobile App Development, Vercel",
+      "#87cefa"
+    )}
+
+${this.wrapWithColor(
+  "─────────────────────────────────────────────────",
+  "#555555"
+)}
 
 <span style="color: #00ffff;">Center for Smart Grid, VIT Chennai | Research Intern</span>
 ${this.wrapWithColor(
@@ -723,27 +758,15 @@ ${this.wrapWithColor(
   "#98fb98"
 )}
 
-• ${this.wrapWithColor("Solar PV Modeling", "#ffa07a")} - ${this.wrapWithColor(
-      "Modeled a solar PV system and boost converter using MATLAB/Simulink based on a single-diode model.",
-      "#ffffff"
-    )}
 • ${this.wrapWithColor(
-      "Dataset Generation",
+      "Hybrid Power System Design",
       "#ffa07a"
     )} - ${this.wrapWithColor(
-      "Generated a comprehensive dataset across varying irradiance and temperature profiles for ANN training.",
+      "Designed a hybrid solar-wind-fuel cell power generation system in MATLAB/Simulink.",
       "#ffffff"
     )}
-• ${this.wrapWithColor("ANN Architecture", "#ffa07a")} - ${this.wrapWithColor(
-      "Designed and trained a feed-forward ANN: 2 inputs, 15 hidden neurons, 1 output.",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("MPPT Controller", "#ffa07a")} - ${this.wrapWithColor(
-      "Implemented ANN-based MPPT to optimize duty cycles, achieving faster dynamic responses and minimizing steady-state oscillations.",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("AI for Hybrid Systems", "#ffa07a")} - ${this.wrapWithColor(
-      "Investigated AI for system optimization and fault detection within hybrid energy systems.",
+• ${this.wrapWithColor("ANN-Based MPPT", "#ffa07a")} - ${this.wrapWithColor(
+      "Implemented a feed-forward Artificial Neural Network (ANN) to optimize solar PV MPPT efficiency.",
       "#ffffff"
     )}
 
@@ -806,6 +829,27 @@ ${this.wrapWithColor(
     const educationDiv = document.createElement("div");
     educationDiv.innerHTML = education;
     outputElement.appendChild(educationDiv);
+    this.scrollToBottom(outputElement.closest(".terminal-content"));
+  }
+
+  showCertifications(outputElement = this.output) {
+    const certifications = `<span style="color: #ffff00; font-weight: bold;">🏆 Certifications</span>
+
+<span style="color: #00ffff;">CSIR-CEERI Chennai Centre</span>
+${this.wrapWithColor("Embedded Control for Power Converters", "#ffffff")}
+${this.wrapWithColor("May – July 2026", "#98fb98")}
+
+<span style="color: #00ffff;">Cognitive Class (IBM Developer Skills Network)</span>
+${this.wrapWithColor("SQL and Relational Databases 101", "#ffffff")}
+${this.wrapWithColor("June 9, 2026", "#98fb98")}
+
+<span style="color: #00ffff;">Forage (Tata)</span>
+${this.wrapWithColor("ESG Job Simulation", "#ffffff")}
+${this.wrapWithColor("June 8, 2026", "#98fb98")}`;
+
+    const certificationsDiv = document.createElement("div");
+    certificationsDiv.innerHTML = certifications;
+    outputElement.appendChild(certificationsDiv);
     this.scrollToBottom(outputElement.closest(".terminal-content"));
   }
 
@@ -959,15 +1003,6 @@ ${this.wrapWithColor("╰──────────────────�
           "Designed a hardware monitoring system using a PZEM module, relay-based capacitor switching, and a dedicated interface to monitor electrical telemetry and dynamically correct power factor.",
         image: "",
         technologies: ["PZEM", "Embedded", "Power Electronics", "Hardware"],
-        demo: "",
-        repo: "",
-      },
-      {
-        title: "Optimization of PID Controller Parameters for Enhanced Motor Control",
-        description:
-          "Optimized PID gains using the Grasshopper Optimization Algorithm (GOA) to achieve faster transient responses and minimize overshoot in MATLAB/Simulink.",
-        image: "",
-        technologies: ["PID", "GOA", "MATLAB/Simulink"],
         demo: "",
         repo: "",
       },
