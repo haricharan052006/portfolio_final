@@ -3727,11 +3727,32 @@ body[data-theme="dark"] .creator-of-label {
   color: #bbbbbb;
 }
 
-/* Creator project card overrides for single-card centering */
+/* Creator showcase row: centers a lone card, balances multiples, stacks on mobile */
+.creator-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 20px;
+}
+
+/* Creator project card overrides for centered showcase layout */
 .creator-project-card {
   max-width: 450px;
   text-align: left;
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push each card's tags/CTA to the bottom so side-by-side cards stay aligned */
+.creator-project-card .project-desc {
   flex: 1;
+}
+
+.creator-project-card .tech-tags {
+  margin-bottom: 1.5rem;
 }
 
 /* Ensure the divider is white in dark mode */

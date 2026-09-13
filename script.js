@@ -971,6 +971,15 @@ ${this.wrapWithColor("╰──────────────────�
   loadProjects() {
     this.projects = [
       {
+        title: "DevSangam: Real-Time Collaborative Cloud IDE",
+        description:
+          "A production-grade collaborative cloud IDE unifying distributed code editing, live voice, and sandboxed execution in one zero-install browser workspace. Yjs CRDTs over a custom WebSocket gateway drive conflict-free multi-cursor editing inside Monaco, with peer-to-peer WebRTC audio, ephemeral Docker containers running polyglot code under strict timeout and cgroup limits, and a context-aware AI debugging copilot.",
+        image: "",
+        technologies: ["Yjs CRDT", "WebRTC", "Monaco", "Docker", "React", "Supabase"],
+        demo: "https://dev-sangam-original.vercel.app/",
+        repo: "",
+      },
+      {
         title: "SeizureGuard: Multi-Sensor Wearable Bio-Telemetry PCB",
         description:
           "Designed and routed a compact, low-noise health monitoring PCB featuring optimized I2C bus architecture for motion/temperature tracking, heartbeat processing, and skin conductance analysis.",
@@ -1003,6 +1012,15 @@ ${this.wrapWithColor("╰──────────────────�
           "Designed a hardware monitoring system using a PZEM module, relay-based capacitor switching, and a dedicated interface to monitor electrical telemetry and dynamically correct power factor.",
         image: "",
         technologies: ["PZEM", "Embedded", "Power Electronics", "Hardware"],
+        demo: "",
+        repo: "",
+      },
+      {
+        title: "Smart Demand-Controlled HVAC VAV System with 3-Phase Power Quality Conditioning",
+        description:
+          "An ESP32 staging controller maps four independent zone occupancy sensors to five proportional VFD frequency stages (0-50 Hz) on a Siemens Sinamics V20, using custom analog scaling and a 500 ms averaging filter to reject PWM ripple and a 1.19 V ground-loop offset. A custom 3-phase LC output filter (line reactor plus delta-connected capacitor bank) reshapes harsh PWM into a clean sinusoid, mitigating dV/dt spikes, acoustic noise, and winding insulation stress. Active power savings, improved power factor, and reduced THD at partial loads were validated on a Fluke 1777 power quality analyzer.",
+        image: "",
+        technologies: ["ESP32", "Siemens V20 VFD", "Power Quality", "LC Filter", "HVAC / VAV", "Fluke 1777"],
         demo: "",
         repo: "",
       },
