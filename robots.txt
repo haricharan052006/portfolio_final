@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://marjoballabani.me/sitemap.xml
+Sitemap: https://portfoliofinal-six-rho.vercel.app/sitemap.xml

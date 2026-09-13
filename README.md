@@ -1,50 +1,61 @@
-Hari Charan V | Engineering Portfolio
-Embedded Systems Enthusiast & Software Developer | 2027 Batch
+# Hari Charan V | Engineering Portfolio
+
+**Embedded Systems Enthusiast & Software Developer | 2027 Batch**
 
 A performance-focused, Neo-Brutalist portfolio built to showcase technical projects, embedded systems expertise, and software development capabilities.
 
-🚀 About
+## 🚀 About
+
 This repository contains the source code for my professional portfolio site. It is designed to act as a central hub for my work, ranging from Microprocessor/Microcontroller interfacing to AI-ML based system modeling and mobile application development.
 
-🛠 Tech Stack
-Frontend Architecture: HTML5, CSS3, JavaScript (ES6+)
+## 🛠 Tech Stack
 
-Design System: Neo-Brutalism (Focus on high contrast, grid-based layouts, and functional UI)
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+) — no framework, no build step. The files in this repo are served exactly as they are.
+- **Design System:** Neo-Brutalism (high contrast, grid-based layouts, functional UI)
+- **Deployment:** Vercel, deploying from `main` on push
+- **Interactive Elements:** FontAwesome (icons), p5.js (terminal Snake game)
 
-Build/Deployment: Vite, Vercel
+## 🏗 Key Features
 
-Interactive Elements: FontAwesome (Icons)
+- **Theme-Aware Engine:** Light/Dark mode toggling, persisted in `localStorage` and applied through CSS custom properties so every component themes from one source.
+- **Component-Driven Layout:** Modular sections for Skills, Education, and Projects, responsive across mobile and desktop.
+- **Interactive Terminal Résumé:** A separate terminal-style page with typed commands (`projects`, `skills`, `help`) and a built-in Snake game.
+- **Performance-First:** Static assets, no bundler, optimized for fast load times and SEO.
 
-🏗 Key Features of this Portfolio
-Theme-Aware Engine: Dynamic Light/Dark mode toggling with persistent color-safe configurations.
+## 📋 Selected Projects Included
 
-Component-Driven Layout: Modular sections for Skills, Education, and Projects designed for responsiveness across mobile and desktop.
+- **DevSangam:** A real-time collaborative cloud IDE — Yjs CRDTs over a custom WebSocket gateway, Monaco editor, peer-to-peer WebRTC voice, and sandboxed Docker code execution.
+- **Smart HVAC VAV System:** Demand-controlled VAV blower driven by an ESP32 and a Siemens Sinamics V20 VFD, with a custom 3-phase LC filter for power quality conditioning.
+- **Cadence:** A cross-platform habit tracking application featuring a 30-Day Performance Matrix and localized data persistence.
+- **SeizureGuard:** A multi-sensor wearable bio-telemetry system focusing on PCB schematic design and I2C bus architecture.
+- **AI-ML Grid Estimation:** ANN-based power system modeling implemented using MATLAB/MATPOWER.
 
-Performance-First: Clean code structure optimized for fast load times and SEO.
+## 📁 Repository Structure
 
-Live Showcase: Integrated project cards with direct links to GitHub repositories for code review.
+```text
+index.html               # Portfolio page: all sections, project cards, inline theme + scroll script
+neo-styles.css           # Neo-Brutalist design system for the portfolio page
+terminal.html            # Standalone interactive terminal resume
+script.js                # TerminalResume engine: commands, project data, modals (terminal page only)
+styles.css               # Terminal page styling
+my-avatar.png            # Hero illustration
+Hari_Charan_Resume.pdf   # Downloadable resume
+robots.txt, sitemap.xml  # SEO
+```
 
-📋 Selected Projects Included
-Cadence: A cross-platform habit tracking application featuring a 30-Day Performance Matrix and localized data persistence.
+## 🌐 Live Site
 
-SeizureGuard: A multi-sensor wearable bio-telemetry system focusing on PCB schematic design and I2C bus architecture.
-
-AI-ML Grid Estimation: ANN-based power system modeling implemented using MATLAB/MATPOWER.
-
-📁 Repository Structure
-Plaintext
-/public         # Assets and static media
-/src            # Core portfolio logic and components
-/css            # Neo-Brutalist stylesheets
-index.html      # Main landing page structure
-🌐 Live Site
 You can view the live portfolio here: https://portfoliofinal-six-rho.vercel.app/
-📝 Contact & Networking
-GitHub: haricharan052006
 
-Academic: VIT Chennai, B.Tech Engineering
+The interactive terminal resume lives at [/terminal.html](https://portfoliofinal-six-rho.vercel.app/terminal.html).
 
-Focus: Embedded Systems, IoT, and AI-ML Applications
+## 📝 Contact & Networking
+
+- **GitHub:** [haricharan052006](https://github.com/haricharan052006)
+- **Academic:** VIT Chennai, B.Tech Engineering
+- **Focus:** Embedded Systems, IoT, and AI-ML Applications
+
+---
 
 Developed with a focus on code readability and architectural integrity.
 
