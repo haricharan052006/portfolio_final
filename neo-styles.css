@@ -2881,17 +2881,7 @@ body[data-theme="dark"] #projects .project-card .tag:active {
   color: #000000;
 }
 
-/* Featured project cards (SOC Estimation, Digital-Twin HIF) */
-.project-card--featured {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card--featured .project-desc {
-  max-width: 75ch;
-}
-
+/* Project card extras: image slot, expandable details, GitHub button */
 /* Image slot: hidden until an <img> is placed inside */
 .project-media {
   margin: 0 0 1.5rem;
@@ -2966,8 +2956,8 @@ body[data-theme="dark"] #projects .project-card .tag:active {
 
 .project-more-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem 2.5rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 .project-more-title {
