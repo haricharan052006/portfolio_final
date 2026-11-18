@@ -380,6 +380,114 @@
 
         <div class="projects-grid">
 
+          <!-- Featured: SOC Estimation for an LFP E-Scooter Battery Pack -->
+          <div class="project-card project-card--featured section fade-in">
+            <div class="project-header">
+              <h3 class="project-title">🔋 SOC Estimation for an LFP E-Scooter Battery Pack</h3>
+            </div>
+            <p class="project-desc">
+              <strong>How accurately can an EV battery's charge be estimated under Indian riding conditions?</strong><br><br>
+              Modelled an LFP e-scooter battery pack on Indian drive cycles and compared two state-of-charge (SOC)
+              estimators, coulomb counting and an Extended Kalman Filter (EKF), across 9 stress tests: 45&nbsp;°C
+              heat, current-sensor offset, wrong initial SOC, cell imbalance and model mismatch.
+            </p>
+
+            <!-- Image slot: uncomment and point at a diagram/screenshot from the repo.
+                 The frame stays hidden while it only contains this comment. -->
+            <figure class="project-media"><!-- <img src="assets/projects/soc-estimation.png" alt="SOC estimation: LFP pack model and EKF vs coulomb counting results" loading="lazy"> --></figure>
+
+            <details class="project-more">
+              <summary>What I built &amp; key results</summary>
+              <div class="project-more-grid">
+                <div>
+                  <h4 class="project-more-title">What I built</h4>
+                  <ul class="job-list">
+                    <li><strong>LFP cell model:</strong> 6&nbsp;Ah 32700 cell, 2RC equivalent circuit + hysteresis, SOC- and
+                      temperature-dependent parameters; Simulink cell block verified against a MATLAB reference (0&nbsp;V error).</li>
+                    <li><strong>Vehicle model:</strong> E-scooter model on Indian IDC/MIDC drive cycles, validated within 7%
+                      of the Ather Rizta's IDC efficiency.</li>
+                    <li><strong>Battery pack:</strong> 16S8P, 51.2&nbsp;V, 2.46&nbsp;kWh pack in Simscape Battery with a thermal
+                      model, cell-to-cell variation and passive balancing.</li>
+                    <li><strong>Estimators:</strong> Coulomb counting and EKF running on all 16 series groups, with a realistic
+                      BMS sensor model (noise, offset, quantisation).</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="project-more-title">Key results</h4>
+                  <ul class="job-list">
+                    <li>EKF kept SOC error (RMSE) ≤&nbsp;1.5% under heat, sensor offset and cell imbalance; coulomb counting
+                      reached up to 3.1% (6.1% max).</li>
+                    <li>LFP's flat voltage curve limits correction: the same 30% SOC error is fixed in under 1&nbsp;s at full
+                      charge but takes 34&nbsp;min at 65% SOC.</li>
+                    <li>Modelling hysteresis mattered: without it, the EKF did worse in 8 of 9 tests.</li>
+                    <li>Voltage-based passive balancing stalls on the LFP plateau (4.6% → 2.2% spread, then stops).</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="project-stack"><strong>Tech stack:</strong> MATLAB, Simulink, Simscape, Simscape Battery,
+                Powertrain Blockset, MATLAB Coder, Git</p>
+            </details>
+
+            <div class="tech-tags">
+              <span class="tag">EV</span>
+              <span class="tag">Battery Management Systems</span>
+              <span class="tag">Kalman Filter</span>
+              <span class="tag">MATLAB/Simulink</span>
+              <span class="tag">Simscape Battery</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/haricharan052006/SOC" target="_blank" rel="noopener" class="btn btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Featured: Digital-Twin High-Impedance Fault (HIF) Detection -->
+          <div class="project-card project-card--featured section fade-in">
+            <div class="project-header">
+              <h3 class="project-title">🛡️ Digital-Twin High-Impedance Fault (HIF) Detection</h3>
+            </div>
+            <p class="project-desc">
+              <strong>Catching the power-line faults that conventional protection misses.</strong><br><br>
+              High-impedance faults (e.g. a conductor touching dry ground or a tree) draw too little current for
+              conventional protection to trip. This project builds a digital twin of a distribution network to
+              generate these faults, detects them with machine learning, and links detection to breaker control
+              with a live monitoring dashboard.
+            </p>
+
+            <!-- Image slot: uncomment and point at a diagram/screenshot from the repo.
+                 The frame stays hidden while it only contains this comment. -->
+            <figure class="project-media"><!-- <img src="assets/projects/digital-twin-hif.png" alt="Digital-twin HIF detection: IEEE 13-bus network, ML detector and telemetry dashboard" loading="lazy"> --></figure>
+
+            <details class="project-more">
+              <summary>What I built</summary>
+              <ul class="job-list">
+                <li><strong>Network model:</strong> IEEE 13-bus distribution network model with an Emanuel arc model to
+                  simulate realistic high-impedance faults.</li>
+                <li><strong>Feature extraction:</strong> Discrete Wavelet Transform (DWT) features from current waveforms.</li>
+                <li><strong>Classifier study:</strong> Comparative study of SVM, Random Forest and CNN classifiers to select
+                  the best detector.</li>
+                <li><strong>Protection:</strong> Detection linked to breaker control.</li>
+                <li><strong>Dashboard:</strong> Real-Time Web Telemetry Dashboard streaming system status over WebSockets.</li>
+              </ul>
+              <p class="project-stack"><strong>Tech:</strong> IEEE 13-bus model, Emanuel arc model, DWT, SVM,
+                Random Forest, CNN, WebSockets</p>
+            </details>
+
+            <div class="tech-tags">
+              <span class="tag">Power Systems</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Fault Detection</span>
+              <span class="tag">Digital Twin</span>
+              <span class="tag">Real-Time Dashboard</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/haricharan052006/digital-twin-hif" target="_blank" rel="noopener" class="btn btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+
           <!-- Project 1: SeizureGuard -->
           <div class="project-card section fade-in">
             <div class="project-header">

@@ -2881,6 +2881,120 @@ body[data-theme="dark"] #projects .project-card .tag:active {
   color: #000000;
 }
 
+/* Featured project cards (SOC Estimation, Digital-Twin HIF) */
+.project-card--featured {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card--featured .project-desc {
+  max-width: 75ch;
+}
+
+/* Image slot: hidden until an <img> is placed inside */
+.project-media {
+  margin: 0 0 1.5rem;
+  border: var(--border-width) solid var(--border);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border);
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.project-media:empty {
+  display: none;
+}
+
+.project-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Expandable "What I built / Key results" block */
+.project-more {
+  margin-bottom: 1.5rem;
+}
+
+.project-more summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--yellow);
+  color: #000000;
+  border: var(--border-width) solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.project-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-more summary::before {
+  content: '▸';
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.project-more[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.project-more summary:hover,
+.project-more[open] summary {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 var(--border);
+}
+
+.project-more summary:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
+}
+
+.project-more > .job-list,
+.project-more-grid {
+  margin-top: 1.5rem;
+}
+
+.project-more-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem 2.5rem;
+}
+
+.project-more-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: var(--border-width) solid var(--border);
+}
+
+.project-more .job-list li {
+  line-height: 1.6;
+}
+
+.project-stack {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-actions {
+  margin-top: 1.5rem;
+}
+
 /* Contact Section - Sticky Notes */
 .contact-container-compact {
   max-width: 900px;

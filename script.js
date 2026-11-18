@@ -971,6 +971,24 @@ ${this.wrapWithColor("╰──────────────────�
   loadProjects() {
     this.projects = [
       {
+        title: "SOC Estimation for an LFP E-Scooter Battery Pack",
+        description:
+          "Modelled an LFP e-scooter battery pack on Indian drive cycles and compared two state-of-charge (SOC) estimators, coulomb counting and an Extended Kalman Filter (EKF), across 9 stress tests: 45 °C heat, current-sensor offset, wrong initial SOC, cell imbalance and model mismatch. The EKF kept SOC error (RMSE) ≤ 1.5% under heat, sensor offset and cell imbalance; coulomb counting reached up to 3.1% (6.1% max).",
+        image: "",
+        technologies: ["EV", "Battery Management Systems", "Kalman Filter", "MATLAB/Simulink", "Simscape Battery"],
+        demo: "",
+        repo: "https://github.com/haricharan052006/SOC",
+      },
+      {
+        title: "Digital-Twin High-Impedance Fault (HIF) Detection",
+        description:
+          "High-impedance faults (e.g. a conductor touching dry ground or a tree) draw too little current for conventional protection to trip. This project builds a digital twin of a distribution network to generate these faults, detects them with machine learning, and links detection to breaker control with a live monitoring dashboard.",
+        image: "",
+        technologies: ["Power Systems", "Machine Learning", "Fault Detection", "Digital Twin", "Real-Time Dashboard"],
+        demo: "",
+        repo: "https://github.com/haricharan052006/digital-twin-hif",
+      },
+      {
         title: "DevSangam: Real-Time Collaborative Cloud IDE",
         description:
           "A production-grade collaborative cloud IDE unifying distributed code editing, live voice, and sandboxed execution in one zero-install browser workspace. Yjs CRDTs over a custom WebSocket gateway drive conflict-free multi-cursor editing inside Monaco, with peer-to-peer WebRTC audio, ephemeral Docker containers running polyglot code under strict timeout and cgroup limits, and a context-aware AI debugging copilot.",

@@ -24,6 +24,8 @@ This repository contains the source code for my professional portfolio site. It 
 
 ## 📋 Selected Projects Included
 
+- **SOC Estimation for an LFP E-Scooter Battery Pack:** Coulomb counting vs. an Extended Kalman Filter on a 16S8P LFP pack in Simscape Battery, tested across 9 stress tests on Indian IDC/MIDC drive cycles.
+- **Digital-Twin High-Impedance Fault (HIF) Detection:** IEEE 13-bus digital twin with an Emanuel arc model, DWT features and an SVM / Random Forest / CNN comparison, linked to breaker control and a live WebSocket dashboard.
 - **DevSangam:** A real-time collaborative cloud IDE — Yjs CRDTs over a custom WebSocket gateway, Monaco editor, peer-to-peer WebRTC voice, and sandboxed Docker code execution.
 - **Smart HVAC VAV System:** Demand-controlled VAV blower driven by an ESP32 and a Siemens Sinamics V20 VFD, with a custom 3-phase LC filter for power quality conditioning.
 - **Cadence:** A cross-platform habit tracking application featuring a 30-Day Performance Matrix and localized data persistence.
