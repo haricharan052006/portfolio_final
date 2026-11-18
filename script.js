@@ -845,7 +845,23 @@ ${this.wrapWithColor("June 9, 2026", "#98fb98")}
 
 <span style="color: #00ffff;">Forage (Tata)</span>
 ${this.wrapWithColor("ESG Job Simulation", "#ffffff")}
-${this.wrapWithColor("June 8, 2026", "#98fb98")}`;
+${this.wrapWithColor("June 8, 2026", "#98fb98")}
+
+<span style="color: #00ffff;">MathWorks</span>
+${this.wrapWithColor("Simulink Onramp", "#ffffff")}
+${this.wrapWithColor("September 2026", "#98fb98")}
+
+<span style="color: #00ffff;">Anthropic</span>
+${this.wrapWithColor("Claude Platform 101", "#ffffff")}
+${this.wrapWithColor("September 2026", "#98fb98")}
+
+<span style="color: #00ffff;">Anthropic</span>
+${this.wrapWithColor("MCP: Advanced Topics", "#ffffff")}
+${this.wrapWithColor("September 2026", "#98fb98")}
+
+<span style="color: #00ffff;">Anthropic</span>
+${this.wrapWithColor("Introduction to Claude Cowork", "#ffffff")}
+${this.wrapWithColor("September 2026", "#98fb98")}`;
 
     const certificationsDiv = document.createElement("div");
     certificationsDiv.innerHTML = certifications;
